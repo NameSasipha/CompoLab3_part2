@@ -1,6 +1,6 @@
 <template>
     <main class="events">
-        <h1>Hello welcome have everthing</h1>
+        <h1>Hello Welcome Have Everthing</h1>
         <br>
         <PassengerCard v-for="passenger in passengers" :key="passenger.id" :passenger="passenger"></PassengerCard>
         <RouterLink :to="{ name: 'PassengerList', query:{ page: page + 1}}" rel="prev" 
@@ -19,6 +19,7 @@ import type { Airline, Passenger } from '@/type';
 import PassengerService from '@/service/PassengerService';
 import {ref, type Ref, watchEffect, computed, } from 'vue'
 import type { Axios, AxiosResponse } from 'axios';
+import router from '@/router';
 
 
 const passengers: Ref<Array<Passenger>> = ref([])

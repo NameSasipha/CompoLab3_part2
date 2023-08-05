@@ -2,9 +2,9 @@
     <RouterLink class="event-link" :to="{name: 'passenger-detail', params: {id: passenger?.id}}">
         <div class="event-card">
             <span>ID: {{ passenger?.id }}</span>
-            <h2>Name: {{ passenger?.first_name }}  {{ passenger?.last_name }}</h2>
-            <h3>Gender: {{ passenger?.gender }}</h3>
-            <h4>Email: {{ passenger?.email }}</h4>
+            <h4>Name: {{ passenger?.first_name }}  {{ passenger?.last_name }}</h4>
+            <h5>Gender: {{ passenger?.gender }}</h5>
+            <h5>Email: {{ passenger?.email }}</h5>
         </div>
     </RouterLink>
 </template>
@@ -38,7 +38,7 @@ const props = defineProps({
 }
 
 .event-link {
-  color: #39495c;
+  color: #2c3e2c;
   text-decoration: none;
 }
 </style>
